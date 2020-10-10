@@ -17,6 +17,8 @@ public abstract class Intel_CPU {
         return this.chipset;
     }
 
+    public abstract double powerConsumption();
+
     public abstract double cost();
     
 }

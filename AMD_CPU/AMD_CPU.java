@@ -17,6 +17,8 @@ public abstract class AMD_CPU {
         return this.chipset;
     }
 
+    public abstract double powerConsumption();
+
     public abstract double cost();
     
 }
