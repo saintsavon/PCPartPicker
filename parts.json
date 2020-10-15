@@ -211,7 +211,51 @@
 },
 
 "PSU": {
-    
+    "wattage": {
+        "650": [
+            {
+                "name": "Corsair 650W CX",
+                "modularity": "semi",
+                "rating": "80+ Bronze",
+                "cost": 94.99
+            },
+            {
+                "name": "EVGA Super Nova 650W G5",
+                "modularity": "full",
+                "rating": "80+ Gold",
+                "cost": 110.99
+            }
+        ],
+        "850": [
+            {
+                "name": "Corsair 850W RMx",
+                "modularity": "full",
+                "rating": "80+ Gold",
+                "cost": 144.99
+            },
+            {
+                "name": "EVGA Super Nova 850W G5",
+                "modularity": "full",
+                "rating": "80+ Gold",
+                "cost": 159.99
+            }
+        ],
+        "1000": [
+            {
+                "name": "Corsair 1000W HX",
+                "modularity": "full",
+                "rating": "80+ Platinum",
+                "cost": 249.99
+
+            },
+            {
+                "name": "EVGA Super Nova 1000W G+",
+                "modularity": "full",
+                "rating": "80+ Gold",
+                "cost": 199.99
+            }
+        ]
+    }
 }
 
 
