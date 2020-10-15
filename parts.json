@@ -90,6 +90,36 @@
         }
         ]
     }
+},
+
+"case": {
+    "formFactor": {
+        "ATX": [
+            {
+                "name": "LianLi 011 Dynamic",
+                "color": "black",
+                "cost": 139.99
+            },
+            {
+                "name": "NZXT H510",
+                "color": "black",
+                "cost": 69.99
+            }
+        ],
+
+        "mATX": [
+            {
+                "name": "LianLi 205M ",
+                "color": "black",
+                "cost": 64.99
+            },
+            {
+                "name": "Corsair Crystal 280X",
+                "color": "white",
+                "cost": 160.99
+            }
+        ]
+    }
 }
 
 }
