@@ -29,7 +29,7 @@ public class PartPickerMain {
                 System.out.println("Please select from the available brand choices.");
             }
         } catch(ParseException pe) {
-            System.out.println("position: " + pe.getPosition()); //ignore for now
+            System.out.println("position: " + pe.getPosition()); // Implement pe.getPosition() method to figure out where error is occurring
             System.out.println(pe);
         }
 
