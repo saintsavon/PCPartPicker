@@ -42,7 +42,6 @@
                 "cost": 399.99        
             }
             ]
-        
     }
 },
 
@@ -77,13 +76,13 @@
             "cost": 294.99
         },
         {
-        "name": "Asus Z390-A Pro",
+            "name": "Asus Z390-A Pro",
             "chipset": "LGA115X",
             "formFactor": "ATX",
             "cost": 124.99
         },
         {
-        "name": "Gigabyte B365M",
+            "name": "Gigabyte B365M",
             "chipset": "LGA115X",
             "formFactor": "mATX",
             "cost": 69.99
@@ -109,7 +108,7 @@
 
         "mATX": [
             {
-                "name": "LianLi 205M ",
+                "name": "LianLi 205M",
                 "color": "black",
                 "cost": 64.99
             },
@@ -120,6 +119,48 @@
             }
         ]
     }
+},
+
+"GPU": {
+    "brand": {
+        "amd": [
+            {
+                "name": "MSI Armor RX580",
+                "powerConsumption": 185,
+                "cost": 199.99        
+            },
+            {
+                "name": "MSI Mech 5700XT",
+                "powerConsumption": 225,
+                "cost": 369.99        
+            },
+            {
+                "name": "XFX Radeon VII Pro",
+                "powerConsumption": 295,
+                "cost": 1299.99        
+            }
+        ],
+
+        "nvidia": [
+            {
+                "name": "Nvidia 1060 FE",
+                "powerConsumption": 120,
+                "cost": 259.99        
+            },
+            {
+                "name": "Nvidia 3080 FE",
+                "powerConsumption": 350,
+                "cost": 699.99        
+            },
+            {
+                "name": "Nvidia 2070 FE",
+                "powerConsumption": 215,
+                "cost": 499.99        
+            }
+        ]
+    }
 }
+
+
 
 }
