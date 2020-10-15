@@ -159,6 +159,55 @@
             }
         ]
     }
+},
+
+"RAM": {
+    "storageAmount": {
+        "8GB": [
+            {
+                "name": "Corsair Vengeance LPX",
+                "CASLatency": 16,
+                "clockSpeed": 3200,
+                "cost": 39.99
+            },
+            {
+                "name": "G.Skill Ripjaws V",
+                "CASLatency": 19,
+                "clockSpeed": 3600,
+                "cost": 32.99
+            }
+        ],
+
+        "16GB": [
+            {
+                "name": "Corsair Vengeance LPX",
+                "CASLatency": 16,
+                "clockSpeed": 3200,
+                "cost": 62.99
+            },
+            {
+                "name": "G.Skill Ripjaws V",
+                "CASLatency": 16,
+                "clockSpeed": 3600,
+                "cost": 78.89
+            }
+        ],
+
+        "32GB": [
+            {
+                "name": "Corsair Vengeance LPX",
+                "CASLatency": 16,
+                "clockSpeed": 3200,
+                "cost": 114.99
+            },
+            {
+                "name": "G.Skill Ripjaws V",
+                "CASLatency": 16,
+                "clockSpeed": 3600,
+                "cost": 144.99
+            }
+        ]
+    }
 }
 
 
