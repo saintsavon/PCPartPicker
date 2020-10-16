@@ -1,4 +1,6 @@
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.text.ParseException;
@@ -12,8 +14,8 @@ public class PartPickerMain {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Object obj = new Object(); // Instanciating JSON object file
-        JSONObject jo = (JSONObject) obj; // Converting simple JSON object to usable object
+        JSONParser parser = new JSONParser(); // Parser to move through JSON file
+        Object obj = new Object(); // Instanciating JSON object file (probably don't need this)
 
         System.out.println("Please select your CPU Brand (intel or amd)?");
         String cpu = scan.nextLine();
@@ -22,17 +24,22 @@ public class PartPickerMain {
             if (cpu == "intel") {
                 System.out.println("Please choose from the following list of compatible CPU's:");
                 System.out.println("");
+
+                Object cpuBrand = parser.parse(new FileReader("parts.json"));
+                JSONObject jsonObject = (JSONObject) obj;
+
+                String intel = (String) jsonObject.get("intel");
+                System.out.println("CPU options: " + intel);
             } else if (cpu == "amd") {
                 System.out.println("Please choose from the following list of compatible CPU's:");
                 System.out.println("");
             } else {
                 System.out.println("Please select from the available brand choices.");
             }
-        } catch(ParseException pe) {
-            System.out.println("position: " + pe.getPosition()); // Implement pe.getPosition() method to figure out where error is occurring
-            System.out.println(pe);
+        } 
+        catch(IOException e) { e.printStackTrace(); }
+        catch (Exception e) {
+            e.printStackTrace();
         }
-
-
     }
 }
