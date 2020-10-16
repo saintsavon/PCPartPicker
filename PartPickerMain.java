@@ -15,7 +15,6 @@ public class PartPickerMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         JSONParser parser = new JSONParser(); // Parser to move through JSON file
-        Object obj = new Object(); // Instanciating JSON object file (probably don't need this)
 
         System.out.println("Please select your CPU Brand (intel or amd)?");
         String cpu = scan.nextLine();
@@ -24,13 +23,13 @@ public class PartPickerMain {
             if (cpu.equals("intel")) {
                 System.out.println("Please choose from the following list of compatible CPU's:");
 
-                Object cpuBrand = parser.parse(new FileReader("parts.json"));
-                
-                //JSONObject jsonObject = (JSONObject) obj;
-                //String intel = (String) jsonObject.get("intel");
-                //System.out.println("CPU options: " + intel);
+                Object obj = parser.parse(new FileReader("PCPartPicker/parts.json"));
 
-                System.out.println("");
+                JSONObject jsonObject = (JSONObject) obj;   //Failure due to one of these 3 lines
+                String intel = (String) jsonObject.toString();
+                System.out.println("CPU options: " + intel);
+
+                //System.out.println("");
 
             } else if (cpu.equals("amd")) {
                 System.out.println("Please choose from the following list of compatible CPU's:");
@@ -40,8 +39,6 @@ public class PartPickerMain {
             }
         } 
         catch(IOException e) { e.printStackTrace(); }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        catch (Exception e) { e.printStackTrace(); }
     }
 }
