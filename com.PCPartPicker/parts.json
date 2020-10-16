@@ -50,4 +50,58 @@
         ]
     }
 }
+
+{
+"mobo": {
+	"brands": [
+		{
+			"brandName": "amd",
+			"products": [
+				{
+					"name": "Asus OG-Strix X570-E Gaming",
+            		"chipset": "AM4",
+            		"formFactor": "ATX",
+            		"cost": 299.99
+            	},
+            	{
+            		"name": "Gigabyte B450M DS3H",
+            		"chipset": "AM4",
+            		"formFactor": "mATX",
+            		"cost": 72.99
+            	},
+            	{
+            		"name": "MSI B450 Tomahawk Max",
+            		"chipset": "AM4",
+            		"formFactor": "ATX",
+            		"cost": 124.99
+            	}
+            ]
+         },
+         {
+         	"brandName": "intel",
+         	"products": [
+         		{
+         			"name": "Asus ROG-Strix Z390E",
+            		"chipset": "LGA115X",
+            		"formFactor": "ATX",
+            		"cost": 294.99
+            	},
+            	{
+            		"name": "Asus Z390-A Pro",
+            		"chipset": "LGA115X",
+            		"formFactor": "ATX",
+            		"cost": 124.99
+            	},
+            	{
+            		"name": "Gigabyte B365M",
+            		"chipset": "LGA115X",
+            		"formFactor": "mATX",
+            		"cost": 69.99
+            	}
+            ]
+        }
+     ]
+   }
+}
+
   

@@ -25,7 +25,15 @@ public class PCPartPickerMain {
 				}
 			}
 			
-			//Second for loop
+			for (MOBOBrand brand: ppl.getMobo().getBrands()) {
+				if (brand.getBrandName().equals("intel")) {
+					System.out.println(brand);
+				} else if (brand.getBrandName().equals("amd")){
+					System.out.println(brand);
+				} else {
+					System.out.checkError();
+				}
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();

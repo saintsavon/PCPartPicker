@@ -3,6 +3,7 @@ package com.PCPartPicker;
 public class PCPartsList {
 
 	private CPUList cpu;
+	private MOBOList mobo;
 
 	public CPUList getCpu() {
 		return cpu;
@@ -10,6 +11,14 @@ public class PCPartsList {
 
 	public void setCpu(CPUList cpu) {
 		this.cpu = cpu;
+	}
+	
+	public MOBOList getMobo() {
+		return mobo;
+	}
+	
+	public void setMobo(MOBOList mobo) {
+		this.mobo = mobo;
 	}
 
 	public PCPartsList() {
@@ -19,12 +28,17 @@ public class PCPartsList {
 
 	@Override
 	public String toString() {
-		return "PCPartsList [CPU=" + cpu + "]";
+		return "PCPartsList [CPU=" + cpu + "MOBO=" + mobo + "]";
 	}
 
 	public PCPartsList(CPUList cpu) {
 		super();
 		this.cpu = cpu;
+	}
+	
+	public PCPartsList(MOBOList mobo) {
+		super();
+		this.mobo = mobo;
 	}
 
 }
