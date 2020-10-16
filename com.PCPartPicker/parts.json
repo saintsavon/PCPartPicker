@@ -1,0 +1,53 @@
+{
+"cpu": {
+	"brands": [
+		{
+                "brandName": "amd",
+                "products": [
+                	{
+                        "name": "Ryzen 5 - 3600X",
+                        "chipset": "AM4",
+                        "powerConsumption": 95,
+                        "cost": 209.09
+                    },
+                    {
+                        "name": "Ryzen 7 - 3700X",
+                        "chipset": "AM4",
+                        "powerConsumption": 65,
+                        "cost": 294.99
+                    },
+                    {
+                        "name": "Ryzen 9 - 3900X",
+                        "chipset": "AM4",
+                        "powerConsumption": 105,
+                        "cost": 429.99
+                    }
+                ]
+            },
+            {
+                "brandName": "intel",
+                "products": [
+                	{
+                        "name": "Intel i5 - 9600K",
+                        "chipset": "LGA115X",
+                        "powerConsumption": 95,
+                        "cost": 199.99
+                    },
+                    {
+                        "name": "Intel i7 - 9700K",
+                        "chipset": "LGA115X",
+                        "powerConsumption": 95,
+                        "cost": 289.99
+                    },
+                    {
+                        "name": "Intel i9 - 9900K",
+                        "chipset": "LGA115X",
+                        "powerConsumption": 95,
+                        "cost": 399.99
+                    }
+                ]
+            }
+        ]
+    }
+}
+  
