@@ -20,21 +20,19 @@ public class PartPickerMain {
         System.out.println("Please select your CPU Brand (intel or amd)?");
         String cpu = scan.nextLine();
 
-        JSONObject jsonObject = (JSONObject) obj;
-        String intel = (String) jsonObject.get("intel");
-        System.out.println("CPU options: " + intel);
-
         try {
-            if (cpu.equals(intel)) {
+            if (cpu.equals("intel")) {
                 System.out.println("Please choose from the following list of compatible CPU's:");
-                System.out.println("");
 
                 Object cpuBrand = parser.parse(new FileReader("parts.json"));
+                
                 //JSONObject jsonObject = (JSONObject) obj;
                 //String intel = (String) jsonObject.get("intel");
                 //System.out.println("CPU options: " + intel);
 
-            } else if (cpu == "amd") {
+                System.out.println("");
+
+            } else if (cpu.equals("amd")) {
                 System.out.println("Please choose from the following list of compatible CPU's:");
                 System.out.println("");
             } else {
