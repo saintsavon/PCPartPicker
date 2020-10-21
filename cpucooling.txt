@@ -1,0 +1,23 @@
+Water 3.0 Riing
+179.99
+Thermaltake
+true
+360
+
+Water 2.0 Extreme
+119.99
+Thermaltake
+true
+240
+
+Hyper 212 EVO
+24.99
+Cooler Master
+false
+89
+
+Hyper 212 RGB Black Edition
+39.99
+Cooler Master
+false
+89
