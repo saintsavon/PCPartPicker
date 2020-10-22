@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class Store {
     public static void main(String args[]) throws FileNotFoundException {
         Scanner input = new Scanner(System.in);
@@ -50,29 +51,20 @@ public class Store {
 
         printGreeting();
 
+        
+
         System.out.print("To begin, please enter yes. Otherwise, to exit enter no: ");
         String command = input.next();
         while (!(command.equals("no"))) {
-            System.out.println("\n\nFirst, select a CPU. The CPU is the brain of the computer, which does all the calculations to make it run.\n\n");
-            cpu.printCPU();
-            System.out.print("\n\nEnter the number of the part you would like to choose: ");
-            int cpuchoice = input.nextInt();
-            try {
-                cpu.getCPU(cpuchoice);
-            } catch (IndexOutOfBoundsException e) {
-                System.out.println("You entered an invalid number, please try again.");
-                System.out.print("Enter the number of the part you would like to choose: ");
-                cpuchoice = input.nextInt();
-            }
-            CPU tempCPU = cpu.getCPU(cpuchoice);
-
+            CPU tempCPU = cpu.getCPU();
+            System.out.println(tempCPU);
 
             System.out.println("\n\nThen, select your cooler. The cooler keeps your CPU cool, ensuring it doesn't overheat.\n\n");
             cpuc.printCPUCooling();
             System.out.print("\n\nEnter the number of the part you would like to choose: ");
-            int cpucchoice = input.nextInt();
-            cpuc.printSingle(cpucchoice);
-            CPUCooling tempCPUC = cpuc.getCPUC(cpucchoice);
+            int coolerChoice = input.nextInt();
+            cpuc.printSingle(coolerChoice);
+            CPUCooling tempCPUC = cpuc.getCPUC(coolerChoice);
 
             System.out.println("\n\nThen, select your motherboard. The motherboard holds all your components together, but has a negligible effect on performance.\n\n");
             if (tempCPU.getSocketType().equals("AM4")) {
@@ -153,89 +145,7 @@ public class Store {
             System.out.print("\n\nWould you like to benchmark this system to see how it performs? (yes/no): ");
             if (input.next().equals("yes")) {
                 System.out.println("\nThis computer scored " + finalComputer.calculatePerformance() + " on our synthetic benchmark.");
-            }
-
-            System.out.print("\nWould you like to store this system in our database? (yes/no): ");
-            if (input.next().equals("yes")) {
-                computers.add(finalComputer);
-            }
-
-
-            if (computers.size() > 1) {
-                System.out.print("\nWould you like to view your previous builds? (yes/no): ");
-                if (input.next().equals("yes")) {
-                    System.out.print("\nEnter the number of the build you would like to view (between 0 and " + (computers.size() - 1) + "): ");
-                    int view = input.nextInt();
-                    try {
-                        System.out.println("\n" + computers.get(view).toString());
-                    } catch (IndexOutOfBoundsException e) {
-                        System.out.println("You entered an invalid number, please try again.");
-                        System.out.print("Enter the number of the build you would like to view (between 0 and " + (computers.size() - 1) + "): ");
-                        view = input.nextInt();
-                    }
-                    System.out.print("\n\nWould you like to compare your builds? (yes/no): ");
-                    if (input.next().equals("yes")) {
-                        System.out.print("\nEnter the number of the build you would like to compare it with (between 0 and " + (computers.size() - 1) + "): ");
-                        int compare = input.nextInt();
-                        try {
-                            System.out.println("\n" + computers.get(compare).toString());
-                        } catch (IndexOutOfBoundsException e) {
-                            System.out.println("You entered an invalid number, please try again.");
-                            System.out.print("\nEnter the number of the build you would like to compare it with (between 0 and " + (computers.size() - 1) + "): ");
-                            compare = input.nextInt();
-                        }
-                        if (computers.get(view).equals(computers.get(compare))) {
-                            System.out.println("\nThe two builds are identical.");
-                        } else {
-                            int compareTo = computers.get(view).compareTo(computers.get(compare));
-                            if (compareTo == 1) {
-                                System.out.println("\nThe CPU is different.");
-                            }
-                            if (compareTo == 2) {
-                                System.out.println("\nThe motherboard is different.");
-                            }
-                            if (compareTo == 3) {
-                                System.out.println("\nThe cooler is different.");
-                            }
-                            if (compareTo == 4) {
-                                System.out.println("\nThe RAM is different.");
-                            }
-                            if (compareTo == 5) {
-                                System.out.println("\nThe GPU is different.");
-                            }
-                            if (compareTo == 6) {
-                                System.out.println("\nThe PSU is different.");
-                            }
-                            if (compareTo == 7) {
-                                System.out.println("\nThe case is different.");
-                            }
-
-                        }
-                    }
-                }
-            }
-
-            System.out.println("\nWould you like to search your builds for a specific CPU? (yes/no): ");
-            if (input.next().equals("yes")){
-                cpu.printCPU();
-                System.out.print("\n\nEnter the number of the part you would like to choose: ");
-                int cpusearchchoice = input.nextInt();
-                try {
-                    cpu.getCPU(cpusearchchoice);
-                } catch (IndexOutOfBoundsException e) {
-                    System.out.println("You entered an invalid number, please try again.");
-                    System.out.print("Enter the number of the part you would like to choose: ");
-                    cpusearchchoice = input.nextInt();
-                }
-                CPU tempsearchCPU = cpu.getCPU(cpusearchchoice);
-                int search = search(computers, tempsearchCPU);
-                if(search == -1){
-                    System.out.println("Your selected CPU was not found in any of your builds.");
-                }
-                else {
-                    System.out.println("This is the first build in our list that contains this CPU: \n" + computers.get(search).toString());
-                }
-            }
+            }       
 
             System.out.print("\nWould you like to start over? (yes/no): ");
             if (input.next().equals("no")) {
